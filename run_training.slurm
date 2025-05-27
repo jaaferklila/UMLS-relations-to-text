@@ -18,7 +18,7 @@
 #SBATCH --gres=gpu:1
 # Mail pour etre informe de l'etat de votre job
 #SBATCH --mail-type=end,fail
-#SBATCH --mail-user=guilhem.piat@cea.fr
+#SBATCH --mail-user=klilajaafer@gmail.com
 # Nom de votre job afficher dans la lise par squeue
 #SBATCH --job-name=long_sep_train_bert_UMLS_gen
 # Limite du nb de CPU
@@ -48,7 +48,7 @@ srun --ntasks=1 --gres=gpu:1 python train_models_old.py \
 #-e 2 &
 
 #HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
-#srun --ntasks=1 --gres=gpu:1 python train_models.py \
+#srun --ntasks=1 --gres=gpu:1 python train_models_jaafer.py \
 #-d both \
 #-o $TIMESTAMP'_Hybrid_model/' \
 #-t 8 \
